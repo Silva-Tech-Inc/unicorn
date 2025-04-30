@@ -1,16 +1,60 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=28&pause=750&color=952323&center=true&width=435&lines=Hello;Welcome+%F0%9F%98%8A+to+Silva+MD+bot;This+is+our+official+repository+;Updated+on+September+2024;Silva+team+is+offering+the+best;For+this+bot;Fork+and+give+a+star)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=28&pause=750&color=D900E6&center=true&width=435&lines=Hey+Unicorns!;Welcome+%F0%9F%A6%84+to+Unicorn+MD;The+magic+starts+here+%F0%9F%8C%88;Updated+on+April+2025;We+build+legendary+bots+for+fun+%F0%9F%94%A5;Unicorns+run+this+bot+%F0%9F%A7%AA;Star+and+fork+to+support+us+%E2%AD%90)](https://git.io/typing-svg)
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=F70707&center=true&width=910&height=100&lines=SILVA+MD+BOT" alt="Typing SVG" /></a>
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-ᴄʟɪᴄᴋ ᴡᴀ ʟᴏɢᴏ ᴛᴏ ᴊᴏɪɴ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 👇 
-<br> [![join](https://raw.githubusercontent.com/SecktorBot/Brandimages/main/secktor.png)](https://chat.whatsapp.com/Ik0YpP0dM8jHVjScf1Ay5S)
-   
-<h4 align="center">SILVA SUPPORT GROUP</h1>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=F707E7&center=true&width=910&height=100&lines=UNICORN+MD+BOT" alt="Typing SVG" /></a>
 
----
-### 🌟 Connect With Me
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+
+## 🦄 Welcome to Unicorn MD
+Unicorn MD is a high-powered WhatsApp userbot developed by **Silva Tech Inc.** It's designed to bring magic and automation to your chats. Whether you're automating tasks or having fun with media, this bot does it all with style and flair. 🌟
+
+### ✨ Cool Features
+- 🎵 **YouTube Magic**: Download videos in **audio** or **video** format straight to your device.
+- 💬 **Smart Auto-Reply**: Set up personalized auto-replies with magical emoji reactions to engage your audience.
+- 🌈 **Interactive Polls**: Create interactive "Would You Rather" polls to keep everyone entertained.
+- 🔮 **Custom Status Responses**: Automatically reply to WhatsApp status updates with creative responses.
+- 🧹 **Spam Control**: Automatic message cleanup for keyword-triggered messages, keeping chats neat.
+- 🚀 **Real-Time Reactions**: Respond with fun and creative reactions to messages and media in your groups or channels.
+- 💎 **Multi-Function Plugin Support**: Enhance your bot with external plugins for even more power and versatility.
+
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+
+## 🌐 Official Repo
+[Unicorn MD GitHub Repository](https://github.com/Sylivanu/unicorn-md)
+
+## 🧩 Fork and Deploy
+Show your support and spread the magic by forking the repo and starring it! ⭐
+
+[![Fork](https://img.shields.io/badge/Fork%20this%20Repo-30363d?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sylivanu/unicorn-md/fork)
+
+## 🚀 Deploy Now
+
+| Platform | Link |
+|---------|------|
+| 🪄 Get Session | [Get Session](https://silva-session-selector.vercel.app/) |
+| ☁️ Heroku | [Deploy on Heroku](https://silva-md-fork-checker.vercel.app/) |
+| 🛤️ Railway | [Deploy on Railway](https://silva-md-fork-checker.vercel.app/) |
+| 🌀 Koyeb | [Deploy on Koyeb](https://silva-md-fork-checker.vercel.app/) |
+| 🧩 Talkdrove | [Deploy on Talkdrove](https://host.talkdrove.com/share-bot/49) |
+
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+
+## ✨ Magic In Action
+Transform your WhatsApp into a powerful automation hub with **Unicorn MD**! Designed to be efficient, fun, and incredibly useful, this bot brings powerful features like automatic replies, media downloads, and much more—all while running seamlessly on your device.
+
+- 🧙‍♂️ **Advanced AI Integration**: Communicate like never before with our AI-driven responses and media tools.
+- 💬 **Group Chat Automation**: Keep your group interactions smooth with automated message replies and reactions.
+- 📊 **Poll Creation**: Engage your audience by creating and managing polls, quizzes, and other interactive content.
+
+<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
+
+## 💬 Join the Unicorn Army
+Get the latest updates, tips, and connect with other users of **Unicorn MD**!
+
+[![Support Group](https://raw.githubusercontent.com/SecktorBot/Brandimages/main/secktor.png)](https://chat.whatsapp.com/Ik0YpP0dM8jHVjScf1Ay5S)
+
+## 📲 Social Links
 <p align="center">
   <a href="https://whatsapp.com/channel/0029VaAkETLLY6d8qhLmZt2v"><img src="https://raw.githubusercontent.com/shizothetechie/database/main/icon/WhatsApp.png" width="10%"></a>
   <a href="https://instagram.com/_its.silva"><img src="https://raw.githubusercontent.com/shizothetechie/database/main/icon/Instagram.png" width="11%"></a>
@@ -18,92 +62,20 @@
   <a href="https://x.com/silva_african"><img src="https://raw.githubusercontent.com/shizothetechie/database/main/icon/twitter.png" width="10%"></a>
 </p>
 
-> A powerful WhatsApp userbot built using the [Baileys](https://github.com/SilvaTechB/Baileys) library.  
-> Automate, interact, and explore AI, media tools, reactions, polls, and more!  
-> Built with ❤️ by [Silva Tech Inc](https://github.com/SilvaTechB).
-
-<p align="center">
-  <a href="https://github.com/SilvaTechB/silva-md-bot">
-    <img alt="Silva docs" height="250" src="https://i.imgur.com/RvEKtPJ.jpeg">
-  </a>
-</p>
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-🍴 Fork our repo and star to show love
-
-[![Fork the repo](https://img.shields.io/badge/Fork%20this%20Repo-30363d?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SilvaTechB/silva-md-bot/fork)
-
- 🌐 Get Your Session ID or Creds.json File 
- 
-[![Get Session](https://img.shields.io/badge/-SILVA%20SESSION-1e293b?style=for-the-badge&logo=whatsapp&logoColor=green)](https://silva-session-selector.vercel.app/)
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-
-## 📌 Deploy Now
-
-| Platform | Links |
-|---------|--------|
-| 🌐 Get Session | [![QR Code](https://img.shields.io/badge/-SILVA%20SESSION-1e293b?style=for-the-badge&logo=whatsapp&logoColor=green)](https://silva-session-selector.vercel.app/) |
-| ☁️ Heroku | [![Deploy Heroku](https://img.shields.io/badge/-DEPLOY%20ON%20HEROKU-6f42c1?style=for-the-badge&logo=heroku&logoColor=white)](https://silva-md-fork-checker.vercel.app/) |
-| 🚄 Railway | [![Deploy Railway](https://img.shields.io/badge/-DEPLOY%20ON%20RAILWAY-0b0b0b?style=for-the-badge&logo=railway&logoColor=white)](https://silva-md-fork-checker.vercel.app/) |
-| 🌀 Koyeb | [![Deploy Koyeb](https://img.shields.io/badge/-DEPLOY%20ON%20KOYEB-ff0050?style=for-the-badge&logo=koyeb&logoColor=white)](https://silva-md-fork-checker.vercel.app/) |
-| 🧩 Talkdrove | [![Deploy Talkdrove](https://img.shields.io/badge/-DEPLOY%20ON%20TALKDROVE-2196F3?style=for-the-badge&logo=whatsapp&logoColor=white)](https://host.talkdrove.com/share-bot/49) |
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-
-## 🧩 Plugins
-
-Boost your bot with external features!  
-[![External Plugins](https://img.shields.io/badge/-External%20Plugins-4b5563?style=for-the-badge&logo=code&logoColor=white)](https://github.com/SilvaTechB/EXTERNAL-PLUGINS)
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-
-## 💡 Features
-
-- 🎵 Download YouTube videos as **audio or video**
-- 💬 Auto-replies + emoji reactions
-- 🔄 Auto motivational replies to viewed statuses
-- 🧹 Message deletion on keyword detection
-- 😄 Group/channel auto-reactions
-- 🗳️ Would You Rather polls
-- 👀 Read all messages (except exempted users)
-- 📲 Manage status and contacts
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-
-## 👨‍💻 Developer Support
-
-- 🧠 Need help? [Open an Issue](https://github.com/SilvaTechB/silva-md-bot/issues)
-- 📩 WhatsApp Dev Chat: [Chat Silva Tech](https://wa.me/+254700143167?text=Hello+Silva+Tech,+I+need+assistance+with+Silva+MD+Bot)
-
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-
-## 📢 Socials
-
-[![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VaAkETLLY6d8qhLmZt2v)
-[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/silva.tech.inc)
-[![Facebook](https://img.shields.io/badge/-Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/profile.php?id=100055490090211)
-[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/silva_african)
-
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
 ## 👥 Contributors
-
-| ![Silva](https://github.com/SilvaTechB.png?size=80) | ![Shizo](https://github.com/shizothetechie.png?size=80) | ![Lazack](https://github.com/Lazack28.png?size=80) |
+| ![Sylivanu](https://github.com/Sylivanu.png?size=80) | ![Main Dev](https://github.com/SilvaTechB.png?size=80) | ![github](https://github.com/github.png?size=80) |
 |---|---|---|
-| [Silva](https://github.com/SilvaTechB) | [Shizo](https://github.com/shizothetechie) | [Lazack28](https://github.com/Lazack28) |
+| [Sylivanu](https://github.com/Sylivanu) | [Main Dev](https://github.com/SilvaTechB) | [Github](https://github.com/github) |
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
-## 🔄 People Who Forked and 
+## 🌟 Show Some Love
+Your support keeps the magic alive. Fork the project and contribute!
 
-[![Forkers](https://reporoster.com/forks/SilvaTechB/silva-md-bot)](https://github.com/SilvaTechB/silva-md-bot/network/members)
-[![Stars](https://reporoster.com/stars/SilvaTechB/silva-md-bot)](https://github.com/SilvaTechB/silva-md-bot/network/members)
+[![Fork](https://img.shields.io/badge/Fork%20this%20Repo-30363d?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sylivanu/unicorn-md/fork)
 
-<img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
-
-## 📎 License
-
+## 📜 License
 Licensed under MIT.  
-© [Silva Tech Inc](https://github.com/SilvaTechB)
-
+© [Unicorn MD by Silva Tech Inc.](https://github.com/Sylivanu/unicorn-md)
