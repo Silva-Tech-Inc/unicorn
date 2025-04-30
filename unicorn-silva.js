@@ -103,7 +103,7 @@ async function gandu() {
       process.exit(1)
     } else {
       console.log(`${endi}`)
-      console.log(chalk.bgBlack(chalk.redBright('Starting silva md bot')))
+      console.log(chalk.bgBlack(chalk.redBright('Starting unicorn md bot')))
     }
   } catch (error) {
     console.error('Error:', error)
@@ -309,7 +309,7 @@ if (pairingCode && !conn.authState.creds.registered) {
   }, 3000)
 }
 
-conn.logger.info('\nWaiting For Login\n')
+conn.logger.info('\nUnicorn is waiting Waiting For Login\n')
 
 if (!opts['test']) {
   if (global.db) {
@@ -372,19 +372,19 @@ async function connectionUpdate(update) {
   }
 
   if (code && (code === DisconnectReason.restartRequired || code === 428)) {
-    conn.logger.info(chalk.yellow('\n Restart Required... Restarting'))
+    conn.logger.info(chalk.yellow('\nUnicorn Restart Required... Restarting'))
     process.send('reset')
   }
 
   if (global.db.data == null) loadDatabase()
 
   if (!pairingCode && useQr && qr !== 0 && qr !== undefined) {
-    conn.logger.info(chalk.yellow('\nLogging in....'))
+    conn.logger.info(chalk.yellow('\nUnicorn is Logging in....'))
   }
 
   if (connection === 'open') {
     const { jid, name } = conn.user
-    const msg = `💖𝑺𝑰𝑳𝑽𝑨 𝑴𝑫 𝑩𝑶𝑻💖 \n\nGreetings ${name}, ✅ Congrats you have successfully deployed *Silva MD Bot* \n\n if your bot sent a message to 254743706010 it is running perfect\n if not relink using silva tech session gen\n ⚙️ *Prefix:*\n 🏢 *Organization:* *Silva Tech Inc.* \n 🗓️ *CREATED:* *Sep 2024* \n\n 🌟 *Follow our WhatsApp Channel for updates:* \n https://whatsapp.com/channel/0029VaAkETLLY6d8qhLmZt2v \n\n 🔄 *New features coming soon. Stay tuned!* \n\n Developer Sylivanus Momanyi\nfounder of Silva Tech Inc`
+    const msg = `🦄 *Unicorn MD is Live!*\n\nHey ${name}, your bot is up and running ✅\n\n> THIS IS A SILVA TECH INC BOT\n\n📅 Launched: Sep 2024\n🔧 Org: Unicorn Tech Inc.\n\n📢 Updates:\nhttps://whatsapp.com/channel/0029VaAkETLLY6d8qhLmZt2v\n\n— Sylivanus Momanyi`
 
     await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
 
@@ -392,7 +392,7 @@ async function connectionUpdate(update) {
   }
 
   if (connection === 'close') {
-    conn.logger.error(chalk.yellow(`\nConnection closed... Get a new session`))
+    conn.logger.error(chalk.yellow(`\nUnicorn Connection closed... Get a new unicorn session`))
   }
 }
 
@@ -498,7 +498,7 @@ global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
     const dir = global.__filename(join(pluginFolder, filename), true)
     if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(`\nUpdated plugin - '${filename}'`)
+      if (existsSync(dir)) conn.logger.info(`\n🦄Updated plugin - '${filename}'`)
       else {
         conn.logger.warn(`\nDeleted plugin - '${filename}'`)
         return delete global.plugins[filename]
@@ -508,13 +508,13 @@ global.reload = async (_ev, filename) => {
       sourceType: 'module',
       allowAwaitOutsideFunction: true,
     })
-    if (err) conn.logger.error(`\nSyntax error while loading '${filename}'\n${format(err)}`)
+    if (err) conn.logger.error(`\n🦄Syntax error while loading '${filename}'\n${format(err)}`)
     else {
       try {
         const module = await import(`${global.__filename(dir)}?update=${Date.now()}`)
         global.plugins[filename] = module.default || module
       } catch (e) {
-        conn.logger.error(`\nError require plugin '${filename}\n${format(e)}'`)
+        conn.logger.error(`\n🦄Error require plugin '${filename}\n${format(e)}'`)
       } finally {
         global.plugins = Object.fromEntries(
           Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b))
@@ -576,7 +576,7 @@ async function _quickTest() {
 async function saafsafai() {
   if (stopped === 'close' || !conn || !conn.user) return
   clearsession()
-  console.log(chalk.cyanBright('\nStored Sessions Cleared'))
+  console.log(chalk.cyanBright('\nUnicorn 🦄 Stored Sessions Cleared'))
 }
 
 setInterval(saafsafai, 10 * 60 * 1000)
