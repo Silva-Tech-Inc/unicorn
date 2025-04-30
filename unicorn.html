@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unicorn MD Status</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe6f7, #e0f7fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .status-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    .status-sub {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .status-box {
+      background: #fceaff;
+      border: 2px dashed #d63384;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .status-box span {
+      font-weight: bold;
+      color: #6a1b9a;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffe6f7;
+      color: #d63384;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .unicorn-emoji {
+      font-size: 48px;
+      margin-bottom: 10px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animated-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #ffd6f5 10%, transparent 11%),
+                  radial-gradient(circle, #d0f0ff 10%, transparent 11%);
+      background-position: 0 0, 50px 50px;
+      background-size: 100px 100px;
+      animation: pulse 10s linear infinite;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        background-position: 0 0, 50px 50px;
+      }
+      100% {
+        background-position: 50px 50px, 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="container">
+    <div class="unicorn-emoji">🦄</div>
+    <div class="status-title">Unicorn MD is Running</div>
+    <div class="status-sub">Magically operational and connected 🌈</div>
+    <div class="status-box">
+      Battery: <span id="battery-percentage">90%</span><br/>
+      IP Address: <span id="ip-address">10.0.0.1</span>
+    </div>
+    <div class="badge">Powered by Unicorn Tech Inc.</div>
+  </div>
+
+  <script>
+    function updateStatus() {
+      document.getElementById("battery-percentage").innerHTML = "92%";
+      document.getElementById("ip-address").innerHTML = "10.0.0.8";
+    }
+
+    setInterval(updateStatus, 5000);
+  </script>
+</body>
+</html>
