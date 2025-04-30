@@ -7,7 +7,7 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 
 figlet(
-  'SILVA MD',
+  'UNICORN',
   {
     font: 'Ghost',
     horizontalLayout: 'default',
@@ -23,7 +23,7 @@ figlet(
 )
 
 figlet(
-  'Silva Bot',
+  'UNICORN',
   {
     horizontalLayout: 'default',
     verticalLayout: 'default',
@@ -95,17 +95,17 @@ async function start(file) {
     console.error(chalk.red(`Error: ${err}`))
     p.kill()
     isRunning = false
-    start('sylivanus.js')
+    start('unicorn-silva.js')
   })
 
-  const pluginsFolder = path.join(path.dirname(currentFilePath), 'lazackcmds')
+  const pluginsFolder = path.join(path.dirname(currentFilePath), 'unicorncmds')
 
   fs.readdir(pluginsFolder, async (err, files) => {
     if (err) {
-      console.error(chalk.red(`Error reading lazackcmds folder: ${err}`))
+      console.error(chalk.red(`Error reading unicorn folder: ${err}`))
       return
     }
-    console.log(chalk.yellow(`Installed ${files.length} plugins`))
+    console.log(chalk.yellow(`unicorn Installed ${files.length} plugins`))
 
     try {
       const { default: baileys } = await import('@whiskeysockets/baileys')
@@ -117,15 +117,15 @@ async function start(file) {
   })
 }
 
-start('sylivanus.js')
+start('unicorn-silva.js')
 
 process.on('unhandledRejection', () => {
   console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
-  start('sylivanus.js')
+  start('unicorn-silva.js')
 })
 
 process.on('exit', code => {
   console.error(chalk.red(`Exited with code: ${code}`))
   console.error(chalk.red(`Bot will restart...`))
-  start('sylivanus.js')
+  start('unicorn-silva.js')
 })
