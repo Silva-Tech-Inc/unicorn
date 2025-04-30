@@ -248,7 +248,7 @@ export async function handler(chatUpdate) {
             let data = (await conn.onWhatsApp(jid))[0] || {}
             if (data.exists)
               m.reply(
-                `*🗂️ Plugin:* ${name}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${m.text}\n\n\${format(e)}`.trim(),
+                `UNICORN ERROR DETECTED IN\n\ncontact developer to fix\n\n*🗂️ Plugin:* ${name}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${m.text}\n\n\${format(e)}`.trim(),
                 data.jid
               )
           }
@@ -395,7 +395,7 @@ export async function handler(chatUpdate) {
         if (plugin.level > _user.level) {
           this.reply(
             m.chat,
-            `🟥 Level required ${plugin.level} to use this command. \nYour level ${_user.level}`,
+            `🟥Unicorm Md Level required ${plugin.level} to use this command. \nYour level ${_user.level}`,
             m
           )
           continue // If the level has not been reached
@@ -441,7 +441,7 @@ export async function handler(chatUpdate) {
                 let data = (await this.onWhatsApp(jid))[0] || {}
                 if (data.exists)
                   return m.reply(
-                    `*🗂️ Plugin:* ${m.plugin}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${usedPrefix}${command} ${args.join(' ')}\n📄 *Error Logs:*\n\n${text}`.trim(),
+                    `UNICORN ERROR DETECTED IN\n\ncontact developer to fix\n\n*🗂️ Plugin:* ${m.plugin}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${usedPrefix}${command} ${args.join(' ')}\n📄 *Error Logs:*\n\n${text}`.trim(),
                     data.jid
                   )
               }
@@ -784,9 +784,9 @@ export async function deleteUpdate(message) {
       conn.user.id,
       `
             ≡ deleted a message 
-            ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
+            ┌─⊷ UNICORN ANTI-DELETE 
             ▢ *Number :* @${participant.split`@`[0]} 
-            └──────silva───────
+            └─────────────
             `.trim(),
       msg,
       {
@@ -851,7 +851,7 @@ export async function presenceUpdate(presenceUpdate) {
       mentions: this.parseMention(caption),
     })
     user.afk = -1
-    user.afkReason = ''
+    user.afkReason = 'OFFLINE'
   }
 }
 
@@ -859,7 +859,7 @@ export async function presenceUpdate(presenceUpdate) {
 dfail
  */
 global.dfail = (type, m, conn) => {
-  const userTag = `👋 Hai *@${m.sender.split('@')[0]}*, `
+  const userTag = `👋 UNICORN POWER HELLO *@${m.sender.split('@')[0]}*, `
   const emoji = {
     general: '⚙️',
     owner: '👑',
@@ -877,11 +877,11 @@ global.dfail = (type, m, conn) => {
 
   const msg = {
     owner: `*${emoji.owner} Owner's Query*\n
-    ${userTag} This command can only be used by the *Bot Owner*!`,
-    moderator: `*${emoji.moderator} Moderator's Query*\n
+    ${userTag} This command can only be used by the *unicorn Owner*!`,
+    moderator: `*${emoji.moderator} Unicorn Moderator's Query*\n
     ${userTag} This command can only be used by *Moderators*!`,
     premium: `*${emoji.premium} Premium Query*\n
-    ${userTag} This command is only for *Premium Members*!`,
+    ${userTag} This command is only for *Unicorn Premium Members*!`,
     group: `*${emoji.group} Group Query*\n
     ${userTag} This command can only be used in *Group Chats*!`,
     private: `*${emoji.private} Private Query*\n
