@@ -1,8 +1,8 @@
 FROM quay.io/gurusensei/gurubhay:latest
 
-RUN git clone https://github.com/SilvaTechB/silva-md-bot /root/sylivanus
+RUN git clone https://github.com/Sylivanu/unicorn-md /root/unicorn
 
-WORKDIR /root/sylivanus/
+WORKDIR /root/unicorn/
 
 RUN npm install --platform=linuxmusl
 
