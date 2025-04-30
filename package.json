@@ -1,8 +1,8 @@
 {
-    "name": "SILVA MD",
+    "name": "unicorn-md",
     "version": "3.0.0",
     "description": "Advanced WhatsApp",
-    "main": "silva.js",
+    "main": "unicorn-md.js",
     "type": "module",
     "directories": {
         "lib": "lib",
@@ -13,8 +13,8 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-        "start": "node silva.js",
-        "test": "node silvamd.js"
+        "start": "node unicorn-md.js",
+        "test": "node unicornmd.js"
     },
     "keywords": [
         "termux-whatsapp-bot",
@@ -22,22 +22,22 @@
         "whatsapp",
         "js-whatsapp",
         "whatsapp",
-        "guru-bot",
-        "GURU-bot-md",
+        "unicorn-bot",
+        "unicorn-bot-md",
         "multi-device",
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/SilvaTechB/silva-md-bot",
+    "homepage": "https://github.com/Sylivanu/unicorn-md",
     "author": {
         "name": "GURU"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/SilvaTechB/silva-md-bot.git"
+        "url": "git+https://github.com/Sylivanu/unicorn-md.git"
     },
     "bugs": {
-        "url": "https://github.com/SilvaTechB/silva-md-bot/issues"
+        "url": "https://github.com/Sylivanu/unicorn-md/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
