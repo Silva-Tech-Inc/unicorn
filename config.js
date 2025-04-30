@@ -72,20 +72,20 @@ global.APIKeys = {
 global.botname = process.env.BOTNAME
 global.premium = 'true'
 global.packname = 'silva'
-global.author = 'silva'
+global.author = 'UNICORN 🦄'
 global.menuvid = ''
 global.igfg = ''
 global.dygp = ''
-global.fgsc = 'https://github.com/SilvaTechB/silva-md-bot'
+global.fgsc = 'https://github.com/Sylivanu/unicorn-md'
 global.fgyt = 'https://youtube.com/@silvaedits254'
 global.fgpyp = 'https://youtube.com/@silvaedits254'
 global.fglog = ''
 global.thumb = fs.readFileSync('./jusorts/sylivanus.jpg')
 
-global.wait = '*⌛ _SILVA MD ANALYSING..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '*🦄 _U.N.I.C.O.R.N..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
-global.done = '✅'
+global.done = '🦄'
 global.error = '❌'
 global.xmoji = '🔥'
 
