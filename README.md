@@ -2,6 +2,10 @@
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
+### 🎵 Listen to the Unicorn Theme:
+
+[▶️ Click here to play](https://github.com/Silva-World/SPARK-DATA/raw/refs/heads/main/unicorntheme.mp3)
+
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=F707E7&center=true&width=910&height=100&lines=UNICORN+MD+BOT" alt="Typing SVG" /></a>
 
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
