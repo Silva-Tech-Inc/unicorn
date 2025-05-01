@@ -13,9 +13,9 @@ global.conn.ev.on('group-participants.update', async (update) => {
       const name = await conn.getName(user);
       const profilePic = await conn.profilePictureUrl(user, 'image').catch(() => 'https://i.imgur.com/RvEKtPJ.jpeg');
 
-      // 🌟 Welcome
+      // 🌈 Welcome
       if (update.action === 'add' && process.env.WELCOME_MSG === 'true') {
-        const welcome = `🌟 *Heads Up Everyone!* 🌟\n\n@${user.split('@')[0]} just teleported into *${metadata.subject}*! 🚀\nLet’s roll out the red carpet! 🎊🎉\n\n👥 We’re now *${groupMemberCount}* strong 💪`;
+        const welcome = `🦄 *Sparkle Alert!* 🦄\n\n@${user.split('@')[0]} just joined the magic in *${metadata.subject}*! 🌟\nLet's shower them with glitter and good vibes! ✨\n\n👥 We are now *${groupMemberCount}* unicorns strong!`;
 
         await conn.sendMessage(update.id, {
           image: { url: profilePic },
@@ -26,16 +26,16 @@ global.conn.ev.on('group-participants.update', async (update) => {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
               newsletterJid: '120363200367779016@newsletter',
-              newsletterName: 'Silva md bot: WELCOME🥰🥰',
+              newsletterName: 'Unicorn MD: WELCOME 🌈',
               serverMessageId: 143
             }
           }
         });
       }
 
-      // 💔 Goodbye
+      // 🕊 Farewell
       if (update.action === 'remove' && process.env.GOODBYE_MSG === 'true') {
-        const goodbye = `💔 *Uh oh...* \n\n@${user.split('@')[0]} just left *${metadata.subject}* 🕊️\nAnother chapter closed. Wishing them good vibes on their journey! ✨\n\n👥 We’re now *${groupMemberCount - 1}* legends left.`;
+        const goodbye = `🌌 *A Unicorn Flies Away...* \n\n@${user.split('@')[0]} has left the enchanted realm of *${metadata.subject}* 🕊️\nWishing them stardust and smooth travels ahead! 💫\n\n👥 We are now *${groupMemberCount - 1}* magical beings.`;
 
         await conn.sendMessage(update.id, {
           image: { url: profilePic },
@@ -46,7 +46,7 @@ global.conn.ev.on('group-participants.update', async (update) => {
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
               newsletterJid: '120363200367779016@newsletter',
-              newsletterName: 'Silva md bot: GOODBYE',
+              newsletterName: 'Unicorn MD: GOODBYE 💔',
               serverMessageId: 143
             }
           }
