@@ -1,25 +1,33 @@
-import axios from 'axios'
-import cheerio from 'cheerio'
+import axios from 'axios';
+import cheerio from 'cheerio';
 
 let handler = async (m, { text }) => {
-  if (!text) throw `✳️ Enter what you want to search for on Wikipedia`
+  if (!text) throw `🔍 Please enter a search term.\n\nExample: *.wiki Unicorn*`;
 
   try {
-    const link = await axios.get(`https://es.wikipedia.org/wiki/${text}`)
-    const $ = cheerio.load(link.data)
-    let wik = $('#firstHeading').text().trim()
-    let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
-    m.reply(`▢ *Wikipedia*
+    const response = await axios.get(`https://es.wikipedia.org/wiki/${encodeURIComponent(text)}`);
+    const $ = cheerio.load(response.data);
+    
+    const title = $('#firstHeading').text().trim();
+    const summary = $('#mw-content-text > div.mw-parser-output').find('p').first().text().trim();
 
-‣ Buscado : ${wik}
+    if (!summary) throw 'No content found.';
 
-${resulw}`)
+    m.reply(
+`🦄 *Unicorn MD — Wikipedia Lookup*
+
+📌 *Query:* ${text}
+📖 *Title:* ${title}
+
+${summary}`
+    );
   } catch (e) {
-    m.reply('⚠️ No results found ')
+    m.reply('⚠️ No results found or an error occurred. Try a different keyword.');
   }
-}
-handler.help = ['wikipedia']
-handler.tags = ['tools']
-handler.command = ['wiki', 'wikipedia']
+};
 
-export default handler
+handler.help = ['wiki', 'wikipedia'];
+handler.tags = ['tools'];
+handler.command = ['wiki', 'wikipedia'];
+
+export default handler;
