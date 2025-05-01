@@ -1,45 +1,77 @@
+import fetch from 'node-fetch';
+import fg from 'api-dylux';
 
-import fetch from 'node-fetch'
-import fg from 'api-dylux'
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
+  const chat = global.db.data.chats[m.chat];
 
- let chat = global.db.data.chats[m.chat]
-  if (!chat.nsfw) throw `🚫 El grupo no admite contenido nsfw \n\nPara habilitar escriba \n*${usedPrefix}enable* nsfw`
-  let user = global.db.data.users[m.sender].age
-  if (user < 17) throw `❎ Eres menor de edad! vuelve cuando tengas más de 18 años`
-  if (!text) throw `✳️ Para buscar\n📌 Use : *${usedPrefix + command} <search>*\n\nPara descargar desde URL:\n📌Use : *${usedPrefix + command} <url>*`
+  if (!chat.nsfw) {
+    throw `🚫 *Contenido NSFW desactivado en este grupo.*\n\n👉 Usa: *${usedPrefix}enable nsfw* para activarlo.`;
+  }
 
-    m.react(rwait)
-    if (text.includes('http://') || text.includes('https://')) {
-        if (!text.includes('xnxx.com')) return m.reply(`❎ Ingrese un link de *xnxx.com*`)
-        try {
-            let xn = await fg.xnxxdl(text)
-            conn.sendFile(m.chat, xn.url_dl, xn.title + '.mp4', `
-≡  *XNXX DL*
-            
-▢ *📌Título*: ${xn.title}
-▢ *⌚Duración:* ${xn.duration}
-▢ *🎞️Calidad:* ${xn.quality}
-`.trim(), m, false, { asDocument: chat.useDocument })
- m.react(done)
- } catch (e) {
-    m.reply(`🔴 Error : intenta mas tarde`)
- }
-    } else {
-        try {
-            let res = await fg.xnxxSearch(text)
-            let ff = res.result.map((v, i) => `${i + 1}┃ *Titulo* : ${v.title}\n*Link:* ${v.link}\n`).join('\n') 
-              if (res.status) m.reply(ff)
-            } catch (e) {
-              m.reply(`🔴 Error: intenta mas tarde`)
-               }
+  const user = global.db.data.users[m.sender].age;
+  if (user < 17) {
+    throw `❎ *Acceso restringido.*\nDebes ser mayor de 18 años para usar este comando.`;
+  }
+
+  if (!text) {
+    throw `🧩 *Uso correcto:*\n\n📌 Buscar contenido:\n*${usedPrefix + command} <búsqueda>*\n\n📌 Descargar desde URL:\n*${usedPrefix + command} <link de xnxx.com>*`;
+  }
+
+  m.react(rwait); // Optional loading reaction
+
+  if (text.includes('http://') || text.includes('https://')) {
+    if (!text.includes('xnxx.com')) {
+      return m.reply(`❎ *Sólo se permiten enlaces de xnxx.com*`);
     }
-}
-handler.help = ['xnxx'] 
-handler.tags = ['nsfw', 'prem']
-handler.command = ['xnxxsearch', 'xnxxdl', 'xnxx'] 
-handler.diamond = 2
-handler.premium = false
-handler.register = true
 
-export default handler
+    try {
+      let xn = await fg.xnxxdl(text);
+      conn.sendFile(
+        m.chat,
+        xn.url_dl,
+        `${xn.title}.mp4`,
+        `
+🔞 *Descarga Completa - Unicorn NSFW*
+
+✨ *Título:* ${xn.title}
+⌚ *Duración:* ${xn.duration}
+🎞️ *Calidad:* ${xn.quality}
+`.trim(),
+        m,
+        false,
+        { asDocument: chat.useDocument }
+      );
+      m.react(done);
+    } catch (e) {
+      console.error(e);
+      m.reply(`🔴 *Error inesperado. Intenta más tarde.*`);
+    }
+  } else {
+    try {
+      let res = await fg.xnxxSearch(text);
+      if (res.status) {
+        let resultText = res.result
+          .map(
+            (v, i) =>
+              `🔹 *${i + 1}.*\n📌 *Título:* ${v.title}\n🔗 *Link:* ${v.link}\n`
+          )
+          .join('\n');
+        m.reply(`📑 *Resultados encontrados:*\n\n${resultText}`);
+      } else {
+        m.reply(`⚠️ *No se encontraron resultados.*`);
+      }
+    } catch (e) {
+      console.error(e);
+      m.reply(`🔴 *Error durante la búsqueda. Intenta más tarde.*`);
+    }
+  }
+};
+
+handler.help = ['xnxx'];
+handler.tags = ['nsfw', 'prem'];
+handler.command = ['xnxxsearch', 'xnxxdl', 'xnxx'];
+handler.diamond = 2;
+handler.premium = false;
+handler.register = true;
+
+export default handler;
