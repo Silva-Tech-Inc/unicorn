@@ -2,24 +2,23 @@ import { exec } from "child_process";
 import path from "path";
 
 let handler = async (m) => {
-  const targetFolder = path.join(process.cwd(), "lazackcmds"); // Bot folder
+  const targetFolder = path.join(process.cwd(), "unicorn-md"); // Path to the Unicorn MD bot folder
 
   try {
-    // Pull updates from the repository
     let output = await execPromise(`git -C ${targetFolder} pull`);
-    
+
     if (output.includes("Already up to date.")) {
-      return m.reply("✅ *Silva MD Bot is already up to date!* 🎉");
+      return m.reply("🟢 *Unicorn MD is already up to date!* ✅\nNo changes found in the repository.");
     }
 
-    m.reply("✅ *Silva MD Bot has been successfully updated!* 🚀\nRestart your bot to apply changes.");
-
+    m.reply("✅ *Unicorn MD has been updated successfully!* 🚀\nRestart your bot to apply the latest changes.");
+    
   } catch (error) {
-    m.reply(`❌ *Update failed:* ${error.message}\nTry updating manually.`);
+    m.reply(`❌ *Update failed!*\n\n🔧 Error: ${error.message}\n\nPlease try updating manually or check your repo access.`);
   }
 };
 
-// Helper function to execute shell commands
+// Promisified exec function
 const execPromise = (command) =>
   new Promise((resolve, reject) => {
     exec(command, (err, stdout, stderr) => {
