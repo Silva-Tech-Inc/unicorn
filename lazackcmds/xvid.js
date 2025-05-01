@@ -1,64 +1,69 @@
-import { xvideosSearch, xvideosdl } from '../lib/scraper.js'
+import { xvideosSearch, xvideosdl } from '../lib/scraper.js';
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-  let chat = global.db.data.chats[m.chat]
-  if (!chat.nsfw)
-    throw `🚫 This group does not support NSFW content.\n\nTo turn it on, use: *${usedPrefix}enable* nsfw`
-  let user = global.db.data.users[m.sender].age
-  if (user < 18) throw `❎ You must be 18 years or older to use this feature.`
-  if (!text)
-    throw `✳️ What do you want to search?\n📌 Usage: *${usedPrefix + command} <search>*\n\nExample: Hot desi bhabi or you can use a link as well\nExample: .xnxx link *`
+  const chat = global.db.data.chats[m.chat];
+  const user = global.db.data.users[m.sender].age;
 
-  m.react('⌛')
-  if (!text) throw 'Please provide a search query or a valid Xvideos URL.'
+  if (!chat.nsfw) {
+    throw `🚫 *NSFW Mode is disabled in this group.*\n\n🛠️ To enable it, use: *${usedPrefix}enable nsfw*`;
+  }
 
-  // Check if the input is a valid Xvideos URL
-  const isURL = /^(https?:\/\/)?(www\.)?xvideos\.com\/.+$/i.test(text)
+  if (user < 18) {
+    throw `🔞 *Access Denied.* You must be 18+ to use this command.`;
+  }
+
+  if (!text) {
+    throw `📌 *Usage Guide:*\nSearch example:\n*${usedPrefix + command} hot latina*\n\nLink example:\n*${usedPrefix + command} https://www.xvideos.com/video...*`;
+  }
+
+  m.react('⌛'); // Show loading reaction
+
+  const isURL = /^(https?:\/\/)?(www\.)?xvideos\.com\/.+$/i.test(text);
 
   try {
     if (isURL) {
-      // If it's a valid URL, directly download the video
-      const result = await xvideosdl(text)
-      const { title, url } = result.result
+      // Direct download
+      const result = await xvideosdl(text);
+      const { title, url } = result.result;
 
-      // Send the video file
-      const response = await fetch(url)
-      const buffer = await response.arrayBuffer()
+      const response = await fetch(url);
+      const buffer = await response.arrayBuffer();
 
-      conn.sendFile(
+      await conn.sendFile(
         m.chat,
         Buffer.from(buffer),
         `${title}.mp4`,
-        `𝐒𝐈𝐋𝐕𝐀 𝐌𝐃 𝐁𝐎𝐓 Here is your Xvideos video: ${title}`
-      )
+        `🦄 *Unicorn MD* - Xvideos Download\n\n🎬 *Title:* ${title}`,
+        m
+      );
     } else {
-      // If it's not a valid URL, perform a search and display the search results
-      const results = await xvideosSearch(text)
-      if (results.length === 0) {
-        m.reply('No search results found for the given query.')
-      } else {
-        const searchResults = results
-          .map((result, index) => {
-            return `${index + 1}. *${result.title}*\nDuration: ${result.duration}\nQuality: ${result.quality}\nURL: ${result.url}`
-          })
-          .join('\n\n')
+      // Perform search
+      const results = await xvideosSearch(text);
 
-        m.reply(`*Search Results for "${text}":*\n\n${searchResults}`)
+      if (!results.length) {
+        return m.reply(`🔍 No results found for *"${text}"*.`);
       }
+
+      const formattedResults = results
+        .map(
+          (r, i) =>
+            `🔸 *${i + 1}. ${r.title}*\n🕒 Duration: ${r.duration}\n📶 Quality: ${r.quality}\n🔗 URL: ${r.url}`
+        )
+        .join('\n\n');
+
+      m.reply(`📽️ *Search Results for:* "${text}"\n\n${formattedResults}`);
     }
-  } catch (error) {
-    console.error(error)
-    throw 'Failed to fetch Xvideos video details.'
+  } catch (err) {
+    console.error(err);
+    throw '🚫 *Error while fetching Xvideos content. Please try again later.*';
   }
-}
+};
 
-handler.help = ['xvid']
-handler.tags = ['nsfw']
-handler.command = ['xvid']
-handler.group = true
-handler.premium = false
-handler.register = true
+handler.help = ['xvid'];
+handler.tags = ['nsfw'];
+handler.command = ['xvid'];
+handler.group = true;
+handler.premium = false;
+handler.register = true;
 
-handler.premium = false
-
-export default handler
+export default handler;
